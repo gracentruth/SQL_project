@@ -89,7 +89,7 @@ public class CrudService {
             updateMap.put("LEVEL"   , level);
             System.out.println("반 입력");
             class_num = Integer.parseInt(br.readLine());
-            updateMap.put("ENG_SCORE" ,class_num);
+            updateMap.put("CLASSNUM" ,class_num);
             System.out.println("번호 입력");
             num = Integer.parseInt(br.readLine());
             updateMap.put("NUM" ,num);
