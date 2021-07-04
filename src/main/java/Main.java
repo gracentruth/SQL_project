@@ -16,7 +16,7 @@ public class Main {
 
         CrudService crudService = new CrudService();
 
-        //SearchService searchService = new SearchService();
+        SearchService searchService = new SearchService();
 
         DDLService DDL = new DDLService(conn);
         DMLService DML = new DMLService(conn);
@@ -70,10 +70,10 @@ public class Main {
 
                         break;
 
-//                    case "5":
-//                        resultList = DQL.selectByName(searchService.searchByName());
-//                        DQL.printMapList(resultList);
-//                        break;
+                    case "5":
+                        resultList = DQL.selectByName(searchService.searchByName());
+                        DQL.printMapList(resultList);
+                        break;
 
                     case "6":
                         resultList = DQL.selectAll();

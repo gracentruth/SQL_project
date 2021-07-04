@@ -7,7 +7,7 @@ import java.util.Map;
 public class DMLService {
 
     final String INSERT_SQL = "INSERT INTO STUDENT ( NAME,LEVEL,CLASSNUM,NUM,INTIME,OUTTIME) VALUES ( ?,?,?,?,?,?)";
-    final String UPDATE_SQL = "UPDATE STUDENT SET NAME = ?, LEVEL = ?, CLASSNUM = ?, NUM = ?, INTIME = ?, OUTTIME = ?, WHERE ID = ?";
+    final String UPDATE_SQL = "UPDATE STUDENT SET NAME = ?, LEVEL = ?, CLASSNUM = ?, NUM = ?, INTIME = ?, OUTTIME = ? WHERE ID = ?";
     final String DELETE_SQL = "DELETE FROM STUDENT WHERE ID = ? ";
 
     Connection conn;
@@ -84,6 +84,7 @@ public class DMLService {
             pstmt.setObject(4, updateMap.get("NUM"));
             pstmt.setObject(5, updateMap.get("INTIME"));
             pstmt.setObject(6, updateMap.get("OUTTIME"));
+            pstmt.setObject(7, updateMap.get("updateID"));
 
             // 쿼리 실행
             pstmt.executeUpdate();
