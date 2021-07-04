@@ -136,7 +136,7 @@ public class DQLService {
             return;
         }
 
-        // 상세 데이터 출력
+        // 상세 데이터 출력//
         System.out.println("No |   이름   학년 반  번호 등교시간 하교시간");
         System.out.println("==================================");
 
